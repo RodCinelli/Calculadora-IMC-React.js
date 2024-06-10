@@ -15,6 +15,7 @@ const IMCResult = ({ imc }) => {
         <div className={styles.result}>
             <p>Seu IMC é: {imc}</p>
             <p>Classificação: {classificacao}</p>
+            <br />
             <table className={styles.imcTable}>
                 <thead>
                     <tr>
