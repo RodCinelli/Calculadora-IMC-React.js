@@ -9,10 +9,38 @@ const IMCResult = ({ imc }) => {
         return 'Obesidade';
     };
 
+    const classificacao = getClassificacao(imc);
+
     return (
         <div className={styles.result}>
             <p>Seu IMC é: {imc}</p>
-            <p>Classificação: {getClassificacao(imc)}</p>
+            <p>Classificação: {classificacao}</p>
+            <table className={styles.imcTable}>
+                <thead>
+                    <tr>
+                        <th>Classificação</th>
+                        <th>IMC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr className={styles.abaixoPeso}>
+                        <td>Abaixo do peso</td>
+                        <td>Menos de 18.5</td>
+                    </tr>
+                    <tr className={styles.pesoNormal}>
+                        <td>Peso normal</td>
+                        <td>18.5 - 24.9</td>
+                    </tr>
+                    <tr className={styles.sobrepeso}>
+                        <td>Sobrepeso</td>
+                        <td>25 - 29.9</td>
+                    </tr>
+                    <tr className={styles.obesidade}>
+                        <td>Obesidade</td>
+                        <td>30 ou mais</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     );
 };
