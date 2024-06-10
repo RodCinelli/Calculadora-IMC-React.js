@@ -1,0 +1,27 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    /* Impede a barra de rolagem vertical */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    background-image: url('/background-image.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    /* Impede a barra de rolagem vertical */
+}
+
+.calculator {
+    margin-top: 13rem;
+    /* Ajuste conforme necessário para descer a calculadora */
+}
